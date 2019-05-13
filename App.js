@@ -1,10 +1,8 @@
-import AppContainer from "./src/AppNavigator.js";
-import AppStockNavigator from "./src/navigators/AppStockNavigator";
 import React from "react";
 import SplashScreen from "react-native-splash-screen";
-
 import { Provider } from "react-redux";
 import store from "./src/redux/store";
+import AppSwitchNavigator from "./src/navigators/AppSwitchNavigator";
 
 export default class App extends React.Component {
   componentDidMount() {
@@ -13,7 +11,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <AppStockNavigator />
+        <AppSwitchNavigator />
       </Provider>
     );
   }

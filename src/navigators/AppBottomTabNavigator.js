@@ -1,11 +1,12 @@
 import Icon from "react-native-vector-icons/Ionicons";
-import { createBottomTabNavigator } from "react-navigation";
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import { Platform } from "react-native";
 import Page1 from "../page/Page1";
+import Drawer from "../navigators/AppDrawNavigator";
 import Page2 from "../page/Page2";
 import Page3 from "../page/Page3";
 import React from "react";
-export const AppTabNavigator = createBottomTabNavigator(
+const AppTabNavigator = createBottomTabNavigator(
   {
     Page1: {
       screen: Page1,

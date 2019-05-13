@@ -1,27 +1,23 @@
 import WelcomePage from "../page/WelcomePage";
-import Home from "../page/Home";
-import Login from "../page/LoginPage";
-import MainTab from './AppBottomTabNavigator'
+import MainTab from "./AppBottomTabNavigator";
+import Drawer from "./AppDrawNavigator";
 import { createStackNavigator, createAppContainer } from "react-navigation";
-
+import PageForm1 from '../page/PageForm1'
 const appStockNavigator = createStackNavigator(
   {
+    Main: {
+      screen: MainTab
+    },
     WelcomePage: {
       screen: WelcomePage
     },
-    Home: {
-      screen: Home
+    PageForm1: {
+      screen: PageForm1
     },
-    Login: {
-      screen: Login
-    },
-    Main:{
-      screen:MainTab
-    }
   },
   {
-    initialRouteName: "Login"
+    initialRouteName: "Main"
   }
 );
 
-export default createAppContainer(appStockNavigator);
+export default appStockNavigator;
