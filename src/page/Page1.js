@@ -12,6 +12,19 @@ export default class Page1 extends Component {
             this.props.navigation.toggleDrawer();
           }}
         />
+        <Button
+          title="跳转高德地图"
+          onPress={() => {
+            this.props.navigation.navigate("AMap");
+          }}
+        />
+
+        <Button
+          title="跳转摄像头"
+          onPress={() => {
+            this.props.navigation.navigate("CameraPage");
+          }}
+        />
       </View>
     );
   }
